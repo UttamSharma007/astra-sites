@@ -47,6 +47,7 @@ if ( ! function_exists( 'astra_sites_setup' ) ) :
 	 */
 	function astra_sites_setup() {
 		require_once ASTRA_SITES_DIR . 'inc/classes/class-astra-sites.php';
+		require_once ASTRA_SITES_DIR . 'inc/lib/notices/class-astra-notices.php';
 	}
 
 	add_action( 'plugins_loaded', 'astra_sites_setup' );
@@ -69,7 +70,7 @@ if ( ! function_exists( 'register_notices' ) ) :
 				'type'                       => '',
 				'message'                    => sprintf(
 					'<div class="notice-image">
-						<img src="%1$s" class="custom-logo" alt="Astra" itemprop="logo"></div> 
+						<img src="%1$s" class="custom-logo" alt="Astra Starter Sites" itemprop="logo"></div> 
 						<div class="notice-content">
 							<div class="notice-heading">
 								%2$s
@@ -92,7 +93,7 @@ if ( ! function_exists( 'register_notices' ) ) :
 					$image_path,
 					__( 'Hello! Seems like you have used Astra sites to build this website — Thanks a ton!', 'astra-sites' ),
 					__( 'Could you please do us a BIG favor and give it a 5-star rating on WordPress? This would boost our motivation and help other users make a comfortable decision while choosing the Astra sites.', 'astra-sites' ),
-					'https://wordpress.org/support/theme/astra/reviews/?filter=5#new-post',
+					'https://wordpress.org/support/plugin/astra-sites/reviews/?filter=5#new-post',
 					__( 'Ok, you deserve it', 'astra-sites' ),
 					MONTH_IN_SECONDS,
 					__( 'Nope, maybe later', 'astra-sites' ),
