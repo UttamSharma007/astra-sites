@@ -62,12 +62,11 @@ if ( ! function_exists( 'register_notices' ) ) :
 	* @since 1.4.0
 	*/
 	function register_notices() {
-		$image_path = ASTRA_SITES_URI . 'inc/assets/images/astra-logo.svg';
+		$image_path = ASTRA_SITES_URI . 'inc/assets/images/astra-sites-icon.jpg';
 		Astra_Notices::add_notice(
 			array(
 				'id'                         => 'astra-sites-rating',
 				'type'                       => '',
-				/* translators: %1$s logo link, %2$s product rating link, %3$s dismissable notice transient time. */
 				'message'                    => sprintf(
 					'<div class="notice-image">
 						<img src="%1$s" class="custom-logo" alt="Astra" itemprop="logo"></div> 
@@ -101,7 +100,7 @@ if ( ! function_exists( 'register_notices' ) ) :
 				),
 				'repeat-notice-after'        => MONTH_IN_SECONDS,
 				'priority'                   => 15,
-				'display-with-other-notices' => true,
+				'display-with-other-notices' => false,
 			)
 		);
 	}
